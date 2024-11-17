@@ -64,8 +64,8 @@ public class Task {
     	        return taskList;
     	    }
     
-    // Checks if the constructed task is a valid task, public to make testing easier
-    public boolean validateTask() {
+    // Checks if the constructed task is a valid task
+    private boolean validateTask() {
     	String check = this.taskAsString;
     	if (check.length()<=6) {
     		return false;
@@ -79,7 +79,7 @@ public class Task {
     }
     
     // Evaluates a String expression
-    public boolean evalString(String check, int solution) {
+    private boolean evalString(String check, int solution) {
     	try {
     		// Build the expression
     		Expression expression = new ExpressionBuilder(check).build();  
@@ -129,9 +129,8 @@ public class Task {
     }
 
     // Method to display task details
-    public void displayTask() {
-        System.out.println("Task: " + taskAsString);
-        System.out.println("Task List: " + taskList);
-        System.out.println("Solution: " + solution);
+    public void displayTaskInConsole() {
+        System.out.println("Task: " + this.taskAsString + " " + this.solution);
+       
     }
 }
