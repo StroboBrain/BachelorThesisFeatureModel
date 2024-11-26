@@ -1,5 +1,5 @@
 /**
- * TODO description
+ * Sets the chosen range (0,100) in the TaskObject
  */
 
 package TaskObject;

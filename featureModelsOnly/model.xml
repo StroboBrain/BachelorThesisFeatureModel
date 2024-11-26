@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+	<properties>
+		<graphics key="autolayoutconstraints" value="false"/>
+		<graphics key="legendposition" value="515,263"/>
+		<graphics key="legendautolayout" value="false"/>
+		<graphics key="showconstraints" value="true"/>
+		<graphics key="showshortnames" value="false"/>
+		<graphics key="layout" value="horizontal"/>
+		<graphics key="showcollapsedconstraints" value="true"/>
+		<graphics key="legendhidden" value="false"/>
+		<graphics key="layoutalgorithm" value="0"/>
+	</properties>
+	<struct>
+		<and mandatory="true" name="task">
+			<graphics key="position" value="390,40"/>
+			<graphics key="collapsed" value="false"/>
+			<or abstract="true" mandatory="true" name="solution range">
+				<graphics key="position" value="86,78"/>
+				<feature name="SR: 0-20">
+					<graphics key="position" value="41,140"/>
+				</feature>
+				<feature name="SR: 0-1000">
+					<graphics key="position" value="90,140"/>
+				</feature>
+				<feature name="SR: 0-4000">
+					<graphics key="position" value="148,140"/>
+				</feature>
+			</or>
+			<and name="operands">
+				<graphics key="position" value="270,98"/>
+				<or abstract="true" mandatory="true" name="operands range">
+					<graphics key="position" value="207,151"/>
+					<feature name="OR: 0-20">
+						<graphics key="position" value="137,198"/>
+					</feature>
+					<feature name="OR: 0-500">
+						<graphics key="position" value="205,203"/>
+					</feature>
+					<feature name="OR: 0-4000">
+						<graphics key="position" value="255,206"/>
+					</feature>
+				</or>
+				<or name="number of operands">
+					<graphics key="position" value="296,151"/>
+					<feature name="one operand">
+						<graphics key="position" value="286,196"/>
+					</feature>
+					<feature name="two operands">
+						<graphics key="position" value="348,196"/>
+					</feature>
+					<feature name="three operands">
+						<graphics key="position" value="414,196"/>
+					</feature>
+				</or>
+			</and>
+			<alt abstract="true" mandatory="true" name="operations">
+				<graphics key="position" value="367,88"/>
+				<feature name="addition">
+					<graphics key="position" value="369,140"/>
+				</feature>
+				<feature name="multiplication">
+					<graphics key="position" value="415,140"/>
+				</feature>
+				<feature name="division">
+					<graphics key="position" value="479,140"/>
+				</feature>
+				<feature name="subtraction">
+					<graphics key="position" value="523,140"/>
+				</feature>
+			</alt>
+			<and abstract="true" name="brackets">
+				<graphics key="position" value="612,95"/>
+				<or name="mandatory brackets">
+					<graphics key="position" value="332,233"/>
+					<feature name="One mandatory bracket">
+						<graphics key="position" value="243,283"/>
+					</feature>
+					<feature name="Two mandatory brackets">
+						<graphics key="position" value="405,280"/>
+					</feature>
+				</or>
+				<alt name="non mandatory brackets">
+					<graphics key="position" value="668,140"/>
+					<feature name="one none mandatory bracket">
+						<graphics key="position" value="553,205"/>
+					</feature>
+					<feature name="two non mandatory brackets">
+						<graphics key="position" value="700,215"/>
+					</feature>
+				</alt>
+			</and>
+			<feature mandatory="true" name="=">
+				<graphics key="position" value="557,68"/>
+			</feature>
+			<feature name="hierarchy rules">
+				<graphics key="position" value="660,95"/>
+			</feature>
+		</and>
+	</struct>
+	<constraints>
+		<rule>
+			<graphics key="position" value="0,0"/>
+			<not>
+				<conj>
+					<var>One mandatory bracket</var>
+					<var>one operand</var>
+				</conj>
+			</not>
+		</rule>
+	</constraints>
+</featureModel>
