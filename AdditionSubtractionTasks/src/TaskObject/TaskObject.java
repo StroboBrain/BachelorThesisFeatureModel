@@ -11,8 +11,8 @@ import net.objecthunter.exp4j.*;
  * 
  * 
  * Precondition:
- * The constructor is called with a valid task of the format, that has a space between each number and operation.
- * Incorrect input is 
+ * The constructor is called with a valid task of the format.
+ * Format: No spaces in tasks 
  * 
  * Postcondition:
  * Holds the task as string and list
@@ -24,19 +24,20 @@ import net.objecthunter.exp4j.*;
 
 public  class  TaskObject {
 	
+	
     private String taskAsString;
 
 	
-    
+    private ArrayList<String> taskList;
+
+	
     private int solution;
 
 	 // Only works for basic tasks
     private ArrayList<String> operands;
 
 	
-    private ArrayList<String> taskList;
-
-	
+    
     
 
     public ArrayList<String> getOperands() {
@@ -52,15 +53,16 @@ public  class  TaskObject {
 	
 
 	// Constructor
-    public TaskObject(String task, int i) {
+    public TaskObject(String task, int solution) {
         this.taskAsString = task;
-        // Add = if not in task
+        // Add "=" if not in task
         this.makeTasksUniform();
-        this.solution = i;
+        this.solution = solution;
         this.taskList = generateTaskList(task);
         
         if (!validateTask()) {
-        	 throw new IllegalArgumentException(task + i + "is not valid");
+        	
+        	 throw new IllegalArgumentException(task + solution + "is not valid");
         }
     }
 
@@ -116,7 +118,6 @@ public  class  TaskObject {
     
     // Evaluates a String expression
     private boolean evalString(String expression, int solution) {
-    	
     	Expression exp = new ExpressionBuilder(expression).build();
     	int result = (int) exp.evaluate();
     	
@@ -145,37 +146,18 @@ public  class  TaskObject {
     }
 
 	
+    
+    
  
 
-    // Getter and Setter methods
     public String getTaskAsString() {
         return this.taskAsString;
     }
 
 	
 
-    public void setTask(String task) {
-        this.taskAsString = task;
-    }
-
-	
-   
     public int getSolution() {
         return this.solution;
-    }
-
-	
-
-    public void setSolution(int solution) {
-        this.solution = solution;
-    }
-
-	
-
-    // Method to display task details
-    public void displayTaskInConsole() {
-        System.out.println("Task: " + this.taskAsString + " " + this.solution);
-       
     }
 
 

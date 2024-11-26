@@ -36,12 +36,14 @@ public   class  TestTaskObject {
 	public void testConstructor() {
 		try {
 			TaskObject.TaskObject test = new TaskObject.TaskObject("5+3=", 4);  // Test constructor
-			assert -1000<test.getSolution(); // Will make the test fail if the constructor does not throw
+			assert 0!=test.getSolution(); // Will make the test fail if the constructor does not throw
 		}
 		catch (Exception e) {
-			
+			// Exception is wanted
 		}
 	}
+	
+	
 
 	
 }
