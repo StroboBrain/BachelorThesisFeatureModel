@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+	<feature automatic="selected" name="Task"/>
+	<feature automatic="selected" name="Operation"/>
+	<feature manual="selected" name="Addition"/>
+	<feature automatic="unselected" name="Subtraction"/>
+	<feature automatic="selected" manual="selected" name="NumberRange"/>
+	<feature automatic="unselected" name="ZeroToTwenty"/>
+	<feature manual="selected" name="ZeroToHundered"/>
+</configuration>
