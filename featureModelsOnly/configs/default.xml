@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+	<feature name="task"/>
+	<feature name="solution range"/>
+	<feature name="SR: 0-20"/>
+	<feature name="SR: 0-1000"/>
+	<feature name="SR: 0-4000"/>
+	<feature name="operands"/>
+	<feature name="operands range"/>
+	<feature name="OR: 0-20"/>
+	<feature name="OR: 0-500"/>
+	<feature name="OR: 0-4000"/>
+	<feature name="number of operands"/>
+	<feature name="one operand"/>
+	<feature name="two operands"/>
+	<feature name="three operands"/>
+	<feature name="four operands"/>
+	<feature name="operations"/>
+	<feature name="multiplicative operations"/>
+	<feature name="multiplication"/>
+	<feature name="division"/>
+	<feature name="cross operations"/>
+	<feature name="subtraction"/>
+	<feature name="addition"/>
+	<feature name="brackets"/>
+	<feature name="mandatory brackets"/>
+	<feature name="one mandatory bracket"/>
+	<feature name="two mandatory brackets"/>
+	<feature name="non mandatory brackets"/>
+	<feature name="one none mandatory bracket"/>
+	<feature name="two non mandatory brackets"/>
+	<feature name="="/>
+	<feature name="hierarchy rules"/>
+</configuration>
