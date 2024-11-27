@@ -2,9 +2,9 @@
 <configuration>
 	<feature automatic="selected" name="Task"/>
 	<feature automatic="selected" name="Operation"/>
-	<feature automatic="unselected" name="Addition"/>
-	<feature manual="selected" name="Subtraction"/>
+	<feature manual="selected" name="Addition"/>
+	<feature automatic="unselected" name="Subtraction"/>
 	<feature automatic="selected" manual="selected" name="NumberRange"/>
-	<feature automatic="unselected" name="ZeroToTwenty"/>
-	<feature manual="selected" name="ZeroToHundered"/>
+	<feature manual="selected" name="ZeroToTwenty"/>
+	<feature automatic="unselected" name="ZeroToHundered"/>
 </configuration>

@@ -21,19 +21,15 @@ public   class  TaskCreation {
 	
 	
 	private int chooseSolution  (int rangeMin, int rangeMax) {
-		int solution = this.random.nextInt(rangeMax-5);
-		
-		return solution; 
+		return rangeMin + random.nextInt((rangeMax - rangeMin) + 1); 
 	}
 
 	
 	
-	 public String createTask  (int rangeMin, int rangeMax, int solution) {
-		// Generate a random number between rangeMin (inclusive) and rangeMax (inclusive)
-		int summandBig = solution + random.nextInt(rangeMax-solution + 1);
-		int summandSmall = summandBig - solution;
-		
-		return summandBig + "-" + summandSmall;
+
+	  public String createTask  (int rangeMin, int rangeMax, int solution) {
+	        int summand = rangeMin + random.nextInt((solution - rangeMin) + 1);
+	        return summand + "+" + (solution - summand);
 	    }
 
 	

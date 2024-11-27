@@ -60,8 +60,8 @@ public  class  TaskObject {
         this.solution = solution;
         this.taskList = generateTaskList(task);
         
+        //Throws IllegalArgumentException if it is not a valid Task
         if (!validateTask()) {
-        	
         	 throw new IllegalArgumentException(task + solution + "is not valid");
         }
     }
