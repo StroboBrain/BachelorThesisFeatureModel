@@ -5,6 +5,8 @@ package TaskObject;
 import java.util.*; 
 // This library is used to evaluate mathematical expressions
 import net.objecthunter.exp4j.*; 
+import java.util.regex.Matcher; 
+import java.util.regex.Pattern; 
 
 
 /* This class holds the task information
@@ -38,6 +40,7 @@ public  class  TaskObject {
 
 	
     
+    
     public ArrayList<String> getOperands() {
 		return operands;
 	}
@@ -48,6 +51,7 @@ public  class  TaskObject {
 		this.operands = operands;
 	}
 
+	
 	
 
 	// Constructor
@@ -70,17 +74,17 @@ public  class  TaskObject {
     // Generates the list version of the string, some trouble With arraystings
     
     private ArrayList<String> generateTaskList (String task) {
-    	        // Split the task string by spaces
-    	        String[] parts = task.split(" ");
-    	        
-    	       // Create an ArrayList from the split parts
-    	        
-    	       ArrayList<String> taskList = new ArrayList<String>(Arrays.asList(parts));
-    	        
-    	       return taskList;
-    	       }
+    	ArrayList<String> taskAsList = new ArrayList<String>();
+    	Pattern pattern = Pattern.compile("\\d+|\\+|\\-|\\*|\\/|\\=");
+    	Matcher matcher = pattern.matcher(task);
+    	while (matcher.find()) {
+    		taskAsList .add(matcher.group());
+    		}
+            return taskAsList ;
+    }
 
 	
+
     
     // Adds an equal sign, if there is none in the task
     private void makeTasksUniform(){
@@ -156,6 +160,12 @@ public  class  TaskObject {
 
     public int getSolution() {
         return this.solution;
+    }
+
+	
+    
+    public ArrayList<String> getTaskAsList(){
+    	return this.taskList;
     }
 
 

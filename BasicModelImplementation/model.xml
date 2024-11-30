@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+	<properties>
+		<graphics key="autolayoutconstraints" value="false"/>
+		<graphics key="legendautolayout" value="true"/>
+		<graphics key="showconstraints" value="true"/>
+		<graphics key="showshortnames" value="false"/>
+		<graphics key="layout" value="horizontal"/>
+		<graphics key="showcollapsedconstraints" value="true"/>
+		<graphics key="legendhidden" value="false"/>
+		<graphics key="layoutalgorithm" value="1"/>
+	</properties>
+	<struct>
+		<and mandatory="true" name="Task">
+			<description>The Task holds the Main and TaskObject class, that give a structure for the task</description>
+			<graphics key="collapsed" value="false"/>
+			<alt mandatory="true" name="Operation">
+				<or abstract="true" name="CrossOperations">
+					<feature name="Subtraction"/>
+					<feature name="Addition"/>
+				</or>
+				<or name="MultiplicativeOperations">
+					<feature name="Multiplication"/>
+					<feature name="Division"/>
+				</or>
+			</alt>
+			<alt abstract="true" mandatory="true" name="NumberRange">
+				<description>It is mandatory to choose a certain range</description>
+				<feature name="ZeroToTwenty"/>
+				<feature name="ZeroToHundered"/>
+			</alt>
+			<feature name="MultipleOfTen">
+				<description>Make the tasks contain multiple of ten</description>
+			</feature>
+		</and>
+	</struct>
+	<featureOrder userDefined="true">
+		<feature name="Task"/>
+		<feature name="Operation"/>
+		<feature name="Subtraction"/>
+		<feature name="Addition"/>
+		<feature name="Multiplication"/>
+		<feature name="Division"/>
+		<feature name="MultiplicativeOperations"/>
+		<feature name="ZeroToTwenty"/>
+		<feature name="ZeroToHundered"/>
+		<feature name="MultipleOfTen"/>
+	</featureOrder>
+</featureModel>
