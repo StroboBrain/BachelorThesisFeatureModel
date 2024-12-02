@@ -31,6 +31,7 @@ public class TaskCreation {
 		
 	}
 	
+	
 	public String getTaskAsString() {
 		return this.taskAsString;
 	}

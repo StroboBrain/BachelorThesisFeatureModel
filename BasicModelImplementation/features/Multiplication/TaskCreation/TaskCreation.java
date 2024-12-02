@@ -15,41 +15,35 @@ public class TaskCreation {
 	private Random random = new Random();
 	private PrimeUtility primeUtility = new PrimeUtility();
 	
-	
-	public boolean isPrime(int check) {
-		return false;
-	}
-	
-	public ArrayList<Integer> factors (int number){
-    	ArrayList<Integer> factorList = new ArrayList<Integer>();
-    	return factorList;
-    	
-    }
-	
-	
+
 	private int chooseSolution(int rangeMin, int rangeMax) {
 		//Incresing the minimun so that there is a possible solution
-		int possibleSolution = rangeMin + random.nextInt((rangeMax - rangeMin) + 1);
-		for (int i = possibleSolution;i<=rangeMax;i++) {
+		int range = rangeMax-rangeMin;
+		int possibleSolution = rangeMin + this.random.nextInt(range);
+		// Change possibleSolution if too small or too big
+		if (possibleSolution<rangeMin+ range / 10){
+			possibleSolution += range / 10;
+		}
+		else if (possibleSolution> rangeMax - range / 10) {
+			possibleSolution -= range / 10;
+		}
+		
+		for (int i = possibleSolution; i<=rangeMax;i++) {
 			if (!this.primeUtility.isPrime(i)) {
 				return i;
 			}
 		}
-		for (int i = possibleSolution;i<=possibleSolution-rangeMin;i++) {
-			
+		for (int i = possibleSolution;i>=rangeMin;i--) {
 			if (!this.primeUtility.isPrime(possibleSolution-i)) {
 				return possibleSolution-i;
 			}
 		}
-		//We should always find a solution
-		assert false : "No possible Solution";
-		return -666;
-		
+		assert false : "A solution should always be found";
+		return -10101;
 	}
 	
  
 	 public String createTask(int rangeMin, int rangeMax, int solution) {
-
 		 ArrayList<Integer> factorList = this.primeUtility.factors(solution);
 		 int index = random.nextInt(factorList.size());
 		 assert index>=0 : "Not working index" + index;

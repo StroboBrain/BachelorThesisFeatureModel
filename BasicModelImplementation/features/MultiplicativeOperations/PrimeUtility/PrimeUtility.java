@@ -33,7 +33,7 @@ public class PrimeUtility {
     			factorList.add(i);
     		}
     	}
-    	assert factorList.size()>0;
+    	assert factorList.size()>0: "Number " + number + " limit " + limit;
     	return factorList;
     	
     	//performance could be improved if needed

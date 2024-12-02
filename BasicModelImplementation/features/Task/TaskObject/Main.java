@@ -21,12 +21,12 @@ public class Main {
     	
         // Print a task in the console
         System.out.println(task);
-        try { 
+        /*try { 
         // Introducing a 2-second delay 
         Thread.sleep(1600); } 
         catch (InterruptedException e) { e.printStackTrace(); }
-        }
-		
+        */
+		}
 		
     }
 

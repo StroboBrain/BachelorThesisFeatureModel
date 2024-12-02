@@ -48,16 +48,16 @@ public class TaskObject {
         this.makeTasksUniform();
         this.solution = solution;
         this.taskList = generateTaskList(task);
+        this.multipleOfTen();
         
         //Throws IllegalArgumentException if it is not a valid Task
         if (!validateTask()) {
-        	 throw new IllegalArgumentException(task + solution + "is not valid");
+        	 throw new IllegalArgumentException(task + solution + " is not valid");
         }
     }
     
     
-    // Generates the list version of the string, some trouble With arraystings
-    
+    // Generates the list version of the string-
     private ArrayList<String> generateTaskList (String task) {
     	ArrayList<String> taskAsList = new ArrayList<String>();
     	Pattern pattern = Pattern.compile("\\d+|\\+|\\-|\\*|\\/|\\=");
@@ -66,6 +66,10 @@ public class TaskObject {
     		taskAsList .add(matcher.group());
     		}
             return taskAsList ;
+    }
+    
+    private void multipleOfTen() {
+    	
     }
 
     

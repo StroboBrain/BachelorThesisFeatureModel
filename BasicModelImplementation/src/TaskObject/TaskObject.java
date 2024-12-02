@@ -1,39 +1,29 @@
+/**
+ * Creates a multiple of ten version of the task
+ */
+
 package TaskObject; 
 
 
 
 import java.util.*; 
-// This library is used to evaluate mathematical expressions
 import net.objecthunter.exp4j.*; 
 import java.util.regex.Matcher; 
 import java.util.regex.Pattern; 
 
+import java.util.ArrayList; 
 
-/* This class holds the task information
- * 
- * 
- * Precondition:
- * The constructor is called with a valid task of the format.
- * Format: No spaces in tasks 
- * 
- * Postcondition:
- * Holds the task as string and list
- * 
- * Invariance:
- * A task is always valid
- * 
- */
 
-public  class  TaskObject {
+public   class  TaskObject {
 	
 	
-    private String taskAsString;
+	private String taskAsString  ;
+
+	 // Only works for basic tasks
+    private ArrayList<String> taskList  ;
 
 	
-    private ArrayList<String> taskList;
-
-	
-    private int solution;
+    private int solution  ;
 
 	 // Only works for basic tasks
     private ArrayList<String> operands;
@@ -61,18 +51,18 @@ public  class  TaskObject {
         this.makeTasksUniform();
         this.solution = solution;
         this.taskList = generateTaskList(task);
+        this.multipleOfTen();
         
         //Throws IllegalArgumentException if it is not a valid Task
         if (!validateTask()) {
-        	 throw new IllegalArgumentException(task + solution + "is not valid");
+        	 throw new IllegalArgumentException(task + solution + " is not valid");
         }
     }
 
 	
     
     
-    // Generates the list version of the string, some trouble With arraystings
-    
+    // Generates the list version of the string-
     private ArrayList<String> generateTaskList (String task) {
     	ArrayList<String> taskAsList = new ArrayList<String>();
     	Pattern pattern = Pattern.compile("\\d+|\\+|\\-|\\*|\\/|\\=");
@@ -82,6 +72,32 @@ public  class  TaskObject {
     		}
             return taskAsList ;
     }
+
+	
+	
+	//Returns a Task with the desired multiple of tens. Hardcoded to 10 at the moment
+	 public void multipleOfTen  () {
+		//Hardcoded at the moment Could be multiple of 100 as well
+		int addZero = 1;
+		String newTask = "";
+		//-1 because we do not want the "="
+		for (int i = 0; i<this.taskList.size();i++) {
+			String temp = taskList.get(i);
+			if (this.isNumeric(temp)){
+				if ((Integer.parseInt(temp))!=0){
+					for (int k=0; k<addZero;k++) {
+					temp += "0";
+					}
+				}
+				this.taskList.set(i,temp);
+			}
+			newTask += temp;
+		}
+		Expression exp = new ExpressionBuilder(newTask).build();
+		this.solution = (int) exp.evaluate();
+		this.taskAsString = newTask +"=";
+		
+	}
 
 	
 
@@ -167,6 +183,20 @@ public  class  TaskObject {
     public ArrayList<String> getTaskAsList(){
     	return this.taskList;
     }
+
+	
+    
+    
+	
+	// Helper methodes to decide if a string is numeric
+	private boolean isNumeric(String str) { 
+		  try {  
+		    Double.parseDouble(str);  
+		    return true;
+		  } catch(NumberFormatException e){  
+		    return false;  
+		  }  
+		}
 
 
 }
