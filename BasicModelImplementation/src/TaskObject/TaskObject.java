@@ -81,7 +81,7 @@ public   class  TaskObject {
 		int addZero = 1;
 		String newTask = "";
 		//-1 because we do not want the "="
-		for (int i = 0; i<this.taskList.size();i++) {
+		for (int i = 0; i<this.taskList.size()-1;i++) {
 			String temp = taskList.get(i);
 			if (this.isNumeric(temp)){
 				if ((Integer.parseInt(temp))!=0){

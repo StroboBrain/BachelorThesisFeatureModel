@@ -1,28 +1,45 @@
-/**
- * Adjusted chooseSolution and create Task to incorporate 
- */
-
 package TaskCreation;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
+import PrimeUtility.*;
+
+
+/**
+ * Creates Division solutions
+ */
+
 
 public class TaskCreation {
 	
 	private Random random = new Random();
-	
-	private int[] possibleSolution(int rangeMin, int rangeMat) {
-		
-	}
-	
+	private PrimeUtility primeUtility = new PrimeUtility();
 	
 	private int chooseSolution(int rangeMin, int rangeMax) {
-		return rangeMin + random.nextInt((rangeMax - rangeMin) + 1); 
+	    // Increasing the minimum so that there is a possible solution
+	    int range = rangeMax - rangeMin;
+	    int possibleSolution = rangeMin + this.random.nextInt(range);
+	    // Change possibleSolution if too small or too big
+	    if (possibleSolution < rangeMin + range / 10) {
+	        possibleSolution += range / 10;
+	    } else if (possibleSolution > rangeMax - range / 10) {
+	        possibleSolution -= range / 10;
+	    }
+	    while (possibleSolution*2>rangeMax) {
+	    	possibleSolution--;
+	    }
+	    return possibleSolution;
 	}
-	
 
+ 
 	 public String createTask(int rangeMin, int rangeMax, int solution) {
-	        int summand = rangeMin + random.nextInt((solution - rangeMin) + 1);
-	        return summand + "+" + (solution - summand);
+		 int maxMultiplier = (int) (rangeMax/solution);
+		 int secondeFactor = this.random.nextInt(maxMultiplier)+1;
+		 int firstFactor = secondeFactor * solution;
+		 
+		 return firstFactor + "/" + secondeFactor + "=";
+	       
 	    }
 	
 
