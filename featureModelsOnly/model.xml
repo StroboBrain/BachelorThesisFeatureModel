@@ -50,11 +50,11 @@
 			</or>
 			<and abstract="true" name="brackets">
 				<graphics key="collapsed" value="false"/>
-				<or name="mandatory brackets">
+				<alt name="mandatory brackets">
 					<graphics key="collapsed" value="false"/>
 					<feature name="one mandatory bracket"/>
 					<feature name="two mandatory brackets"/>
-				</or>
+				</alt>
 				<alt name="non mandatory brackets">
 					<graphics key="collapsed" value="false"/>
 					<feature name="one none mandatory bracket"/>
