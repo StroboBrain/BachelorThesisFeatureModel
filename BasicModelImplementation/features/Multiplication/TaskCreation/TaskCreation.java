@@ -50,7 +50,7 @@ public class TaskCreation {
 		 int firstFactor = factorList.get(index);
 		 int secondeFactor = (int) solution/firstFactor;
 		 assert firstFactor * secondeFactor == solution;
-		 return firstFactor + "*" + secondeFactor + "=";
+		 return firstFactor + "*" + secondeFactor;
 	       
 	    }
 	

@@ -38,7 +38,7 @@ public class TaskCreation {
 		 int secondeFactor = this.random.nextInt(maxMultiplier)+1;
 		 int firstFactor = secondeFactor * solution;
 		 
-		 return firstFactor + "/" + secondeFactor + "=";
+		 return firstFactor + "/" + secondeFactor;
 	       
 	    }
 	
