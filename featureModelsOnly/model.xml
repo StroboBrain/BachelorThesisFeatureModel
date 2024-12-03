@@ -48,27 +48,27 @@
 					<feature name="addition"/>
 				</or>
 			</or>
-			<and abstract="true" name="brackets">
+			<and abstract="true" name="parentheses">
 				<graphics key="collapsed" value="false"/>
-				<alt name="mandatory brackets">
+				<alt name="mandatory parentheses">
 					<graphics key="collapsed" value="false"/>
 					<feature name="one mandatory bracket"/>
 					<feature name="two mandatory brackets"/>
 				</alt>
-				<alt name="non mandatory brackets">
+				<alt name="non mandatory parentheses">
 					<graphics key="collapsed" value="false"/>
 					<feature name="one none mandatory bracket"/>
 					<feature name="two non mandatory brackets"/>
 				</alt>
 			</and>
 			<feature mandatory="true" name="="/>
-			<feature name="hierarchy rules"/>
+			<feature name="order of operations"/>
 		</and>
 	</struct>
 	<constraints>
 		<rule>
 			<imp>
-				<var>hierarchy rules</var>
+				<var>order of operations</var>
 				<conj>
 					<var>cross operations</var>
 					<var>multiplicative operations</var>
@@ -77,7 +77,7 @@
 		</rule>
 		<rule>
 			<imp>
-				<var>mandatory brackets</var>
+				<var>mandatory parentheses</var>
 				<conj>
 					<var>cross operations</var>
 					<var>multiplicative operations</var>
@@ -86,7 +86,7 @@
 		</rule>
 		<rule>
 			<imp>
-				<var>mandatory brackets</var>
+				<var>mandatory parentheses</var>
 				<disj>
 					<var>three operands</var>
 					<var>four operands</var>

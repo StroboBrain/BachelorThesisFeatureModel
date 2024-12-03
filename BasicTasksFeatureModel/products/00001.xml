@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+	<feature automatic="selected" manual="selected" name="task"/>
+	<feature automatic="selected" manual="selected" name="solution range"/>
+	<feature automatic="selected" manual="selected" name="operands"/>
+	<feature automatic="selected" manual="selected" name="number of operands"/>
+	<feature automatic="selected" manual="selected" name="operations"/>
+	<feature manual="selected" name="multiplication"/>
+	<feature manual="unselected" name="division"/>
+	<feature manual="unselected" name="subtraction"/>
+	<feature manual="unselected" name="addition"/>
+	<feature name="exponents"/>
+	<feature name="roots"/>
+	<feature manual="unselected" name="brackets"/>
+	<feature automatic="unselected" manual="unselected" name="mandatory brackets"/>
+	<feature automatic="unselected" manual="unselected" name="non mandatory brackets"/>
+	<feature automatic="selected" manual="selected" name="="/>
+	<feature automatic="unselected" manual="unselected" name="hierarchy rules"/>
+	<feature automatic="selected" name="Number Range"/>
+	<feature manual="selected" name="operands range"/>
+</configuration>

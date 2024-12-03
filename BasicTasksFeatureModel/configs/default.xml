@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+	<feature automatic="selected" manual="selected" name="task"/>
+	<feature automatic="selected" manual="selected" name="operations"/>
+	<feature automatic="selected" name="multiplicative operations"/>
+	<feature manual="unselected" name="division"/>
+	<feature manual="selected" name="multiplication"/>
+	<feature name="exponential operations"/>
+	<feature name="exponents"/>
+	<feature name="roots"/>
+	<feature automatic="unselected" name="cross operation"/>
+	<feature manual="unselected" name="addition"/>
+	<feature manual="unselected" name="subtraction"/>
+	<feature automatic="selected" manual="selected" name="number of operands"/>
+	<feature name="parentheses"/>
+	<feature name="mandatory parentheses"/>
+	<feature name="non mandatory parentheses"/>
+	<feature automatic="selected" manual="selected" name="="/>
+	<feature manual="unselected" name="order of operations"/>
+	<feature automatic="selected" name="number Range"/>
+	<feature automatic="selected" manual="selected" name="solution range"/>
+	<feature automatic="selected" manual="selected" name="operands range"/>
+	<feature automatic="selected" name="type of numbers"/>
+	<feature name="integers"/>
+	<feature name="common fractions"/>
+	<feature name="decimal fractions"/>
+	<feature name="negative numbers"/>
+	<feature name="regrouping"/>
+	<feature name="multiple of ten"/>
+</configuration>
