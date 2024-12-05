@@ -52,13 +52,13 @@
 				<graphics key="collapsed" value="false"/>
 				<alt name="mandatory parentheses">
 					<graphics key="collapsed" value="false"/>
-					<feature name="one mandatory bracket"/>
-					<feature name="two mandatory brackets"/>
+					<feature name="one mandatory parenthese"/>
+					<feature name="two mandatory parenthese"/>
 				</alt>
 				<alt name="non mandatory parentheses">
 					<graphics key="collapsed" value="false"/>
-					<feature name="one none mandatory bracket"/>
-					<feature name="two non mandatory brackets"/>
+					<feature name="one none mandatory parenthese"/>
+					<feature name="two non mandatory parenthese"/>
 				</alt>
 			</and>
 			<feature mandatory="true" name="="/>
@@ -95,7 +95,7 @@
 		</rule>
 		<rule>
 			<imp>
-				<var>two mandatory brackets</var>
+				<var>two mandatory parenthese</var>
 				<var>four operands</var>
 			</imp>
 		</rule>

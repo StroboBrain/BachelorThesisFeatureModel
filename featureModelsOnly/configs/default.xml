@@ -24,11 +24,11 @@
 	<feature name="addition"/>
 	<feature name="parentheses"/>
 	<feature automatic="unselected" name="mandatory parentheses"/>
-	<feature automatic="unselected" name="one mandatory bracket"/>
-	<feature automatic="unselected" name="two mandatory brackets"/>
+	<feature automatic="unselected" name="one mandatory parenthese"/>
+	<feature automatic="unselected" name="two mandatory parenthese"/>
 	<feature name="non mandatory parentheses"/>
-	<feature name="one none mandatory bracket"/>
-	<feature name="two non mandatory brackets"/>
+	<feature name="one none mandatory parenthese"/>
+	<feature name="two non mandatory parenthese"/>
 	<feature automatic="selected" name="="/>
 	<feature name="order of operations"/>
 </configuration>
