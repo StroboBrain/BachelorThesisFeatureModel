@@ -5,10 +5,10 @@
 		<graphics key="legendautolayout" value="true"/>
 		<graphics key="showconstraints" value="true"/>
 		<graphics key="showshortnames" value="false"/>
-		<graphics key="layout" value="vertical"/>
+		<graphics key="layout" value="horizontal"/>
 		<graphics key="showcollapsedconstraints" value="true"/>
 		<graphics key="legendhidden" value="false"/>
-		<graphics key="layoutalgorithm" value="6"/>
+		<graphics key="layoutalgorithm" value="1"/>
 	</properties>
 	<struct>
 		<and mandatory="true" name="task">
@@ -61,7 +61,6 @@
 					<feature name="two non mandatory parenthese"/>
 				</alt>
 			</and>
-			<feature mandatory="true" name="="/>
 			<feature name="order of operations"/>
 		</and>
 	</struct>

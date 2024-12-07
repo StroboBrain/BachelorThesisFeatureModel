@@ -6,10 +6,10 @@
 	<feature automatic="unselected" name="Subtraction"/>
 	<feature automatic="unselected" name="Addition"/>
 	<feature automatic="selected" manual="selected" name="MultiplicativeOperations"/>
-	<feature manual="selected" name="Multiplication"/>
-	<feature automatic="unselected" name="Division"/>
+	<feature automatic="unselected" name="Multiplication"/>
+	<feature manual="selected" name="Division"/>
 	<feature automatic="selected" name="NumberRange"/>
-	<feature automatic="unselected" name="ZeroToTwenty"/>
-	<feature manual="selected" name="ZeroToHundered"/>
-	<feature name="MultipleOfTen"/>
+	<feature manual="selected" name="ZeroToTwenty"/>
+	<feature automatic="unselected" name="ZeroToHundered"/>
+	<feature manual="selected" name="MultipleOfTen"/>
 </configuration>
