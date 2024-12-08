@@ -9,7 +9,7 @@
 	<feature automatic="unselected" name="Multiplication"/>
 	<feature manual="selected" name="Division"/>
 	<feature automatic="selected" name="NumberRange"/>
-	<feature manual="selected" name="ZeroToTwenty"/>
-	<feature automatic="unselected" name="ZeroToHundered"/>
+	<feature manual="selected" name="OneTo1000"/>
+	<feature automatic="unselected" name="OneTo4000"/>
 	<feature manual="selected" name="MultipleOfTen"/>
 </configuration>

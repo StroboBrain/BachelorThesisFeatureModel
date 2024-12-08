@@ -26,8 +26,8 @@
 			</alt>
 			<alt abstract="true" mandatory="true" name="NumberRange">
 				<description>It is mandatory to choose a certain range</description>
-				<feature name="ZeroToTwenty"/>
-				<feature name="ZeroToHundered"/>
+				<feature name="OneTo1000"/>
+				<feature name="OneTo4000"/>
 			</alt>
 			<feature name="MultipleOfTen">
 				<description>Make the tasks contain multiple of ten</description>
@@ -42,8 +42,8 @@
 		<feature name="Multiplication"/>
 		<feature name="Division"/>
 		<feature name="MultiplicativeOperations"/>
-		<feature name="ZeroToTwenty"/>
-		<feature name="ZeroToHundered"/>
+		<feature name="OneTo1000"/>
+		<feature name="OneTo4000"/>
 		<feature name="MultipleOfTen"/>
 	</featureOrder>
 </featureModel>
