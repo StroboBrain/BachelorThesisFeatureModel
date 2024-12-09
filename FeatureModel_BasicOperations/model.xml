@@ -14,36 +14,32 @@
 		<and mandatory="true" name="Task">
 			<description>The Task holds the Main and TaskObject class, that give a structure for the task</description>
 			<graphics key="collapsed" value="false"/>
-			<alt mandatory="true" name="Operation">
-				<alt abstract="true" name="CrossOperations">
-					<feature name="Subtraction"/>
-					<feature name="Addition"/>
-				</alt>
-				<alt name="MultiplicativeOperations">
-					<feature name="Multiplication"/>
-					<feature name="Division"/>
-				</alt>
+			<alt abstract="true" mandatory="true" name="Operation">
+				<feature name="Subtraction"/>
+				<feature name="Addition"/>
+				<feature name="Multiplication"/>
+				<feature name="Division"/>
 			</alt>
 			<alt abstract="true" mandatory="true" name="NumberRange">
 				<description>It is mandatory to choose a certain range</description>
-				<feature name="ZeroToTwenty"/>
-				<feature name="ZeroToHundered"/>
+				<feature name="OperandRange"/>
+				<feature name="ResultRange"/>
 			</alt>
 			<feature name="MultipleOfTen">
 				<description>Make the tasks contain multiple of ten</description>
 			</feature>
+			<feature mandatory="true" name="="/>
 		</and>
 	</struct>
 	<featureOrder userDefined="true">
 		<feature name="Task"/>
-		<feature name="Operation"/>
 		<feature name="Subtraction"/>
 		<feature name="Addition"/>
 		<feature name="Multiplication"/>
 		<feature name="Division"/>
-		<feature name="MultiplicativeOperations"/>
-		<feature name="ZeroToTwenty"/>
-		<feature name="ZeroToHundered"/>
+		<feature name="OperandRange"/>
+		<feature name="ResultRange"/>
 		<feature name="MultipleOfTen"/>
+		<feature name="="/>
 	</featureOrder>
 </featureModel>

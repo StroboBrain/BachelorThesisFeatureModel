@@ -1,5 +1,5 @@
 /**
- * Sets the chosen range(0,20) in the TaskObject
+ * Sets the chosen range[1,1000] in the TaskObject
  */
 
 package TaskObject; 
@@ -7,10 +7,10 @@ import TaskCreation.*;
 
 public   class  Main {
 	
-	private int minRange  = 0;
+	private int minRange  = 1;
 
 	
-	private int maxRange  = 20;
+	private int maxRange  = 1000;
 
 	
 	

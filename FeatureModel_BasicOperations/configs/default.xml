@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <configuration>
-	<feature name="ExtendedBasicFeatureModel"/>
-	<feature name="Base"/>
+	<feature name="Task"/>
+	<feature name="Operation"/>
+	<feature name="Subtraction"/>
+	<feature name="Addition"/>
+	<feature name="Multiplication"/>
+	<feature name="Division"/>
+	<feature name="NumberRange"/>
+	<feature name="OperandRange"/>
+	<feature name="ResultRange"/>
+	<feature name="MultipleOfTen"/>
+	<feature name="="/>
 </configuration>

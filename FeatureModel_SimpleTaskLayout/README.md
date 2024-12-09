@@ -1,8 +1,10 @@
-# BasicTaskFeatureModel
+# Simple Task Layout Feature Model
 
-### BasicTask
-Basic tasks are of following type:
-arithmetical expression = 
+### Simple Task Layout
+The simple task layout is as following:
+arithmetical expression = solution
 
-### Cross Constraints
-The ranges are not explicit implemented, this is the reason some cross constraints are absent.
+Only the arithmetical expression is given to the task solver.
+
+### Range Features
+Range features are light green color coded. These are the feature that can be more then just a Boolean value.
