@@ -10,7 +10,7 @@ Each feature model has its own folder.
 The folder /Implementation_FeatureModel_BasicOperations holds a Maven Java Project that implements a minimal viable prototype.
 
 ## License
-- [Mozilla Public License Version 2.0](LICENSE.md)
+- [Mozilla Public License Version 2.0](LICENSE)
 
 ## Requirements
 - Eclipse IDE
