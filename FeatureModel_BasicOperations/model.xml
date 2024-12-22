@@ -5,26 +5,26 @@
 		<graphics key="legendautolayout" value="true"/>
 		<graphics key="showconstraints" value="true"/>
 		<graphics key="showshortnames" value="false"/>
-		<graphics key="layout" value="vertical"/>
+		<graphics key="layout" value="horizontal"/>
 		<graphics key="showcollapsedconstraints" value="true"/>
 		<graphics key="legendhidden" value="false"/>
-		<graphics key="layoutalgorithm" value="4"/>
+		<graphics key="layoutalgorithm" value="1"/>
 	</properties>
 	<struct>
 		<and mandatory="true" name="Task">
 			<description>The Task holds the Main and TaskObject class, that give a structure for the task</description>
 			<graphics key="collapsed" value="false"/>
-			<alt abstract="true" mandatory="true" name="Operation">
+			<or abstract="true" mandatory="true" name="Operation">
 				<feature name="Subtraction"/>
 				<feature name="Addition"/>
 				<feature name="Multiplication"/>
 				<feature name="Division"/>
-			</alt>
-			<alt abstract="true" mandatory="true" name="NumberRange">
+			</or>
+			<and abstract="true" mandatory="true" name="NumberRange">
 				<description>It is mandatory to choose a certain range</description>
-				<feature name="OperandRange"/>
-				<feature name="ResultRange"/>
-			</alt>
+				<feature mandatory="true" name="OperandRange"/>
+				<feature mandatory="true" name="ResultRange"/>
+			</and>
 			<feature name="MultipleOfTen">
 				<description>Make the tasks contain multiple of ten</description>
 			</feature>
