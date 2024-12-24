@@ -1,0 +1,2 @@
+# Implementation of Feature Model "Basic Operation"
+Select a valid product configuration in the configs files to create the coresponding source code. Run the Main methode in Main.java to create the coresponding tasks.

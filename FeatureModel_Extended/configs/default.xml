@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <configuration>
-	<feature name="FeatureModel_Extended"/>
-	<feature name="Base"/>
+	<feature name="task"/>
+	<feature name="operations"/>
+	<feature name="multiplicative operations"/>
+	<feature name="division"/>
+	<feature name="multiplication"/>
+	<feature name="exponential operations"/>
+	<feature name="exponents"/>
+	<feature name="roots"/>
+	<feature name="cross operation"/>
+	<feature name="addition"/>
+	<feature name="subtraction"/>
+	<feature name="number of operands"/>
+	<feature name="parentheses"/>
+	<feature name="mandatory parentheses"/>
+	<feature name="non mandatory parentheses"/>
+	<feature name="="/>
+	<feature name="order of operations"/>
+	<feature name="number Range"/>
+	<feature name="solution range"/>
+	<feature name="operands range"/>
+	<feature name="type of numbers"/>
+	<feature name="integers"/>
+	<feature name="common fractions"/>
+	<feature name="decimal fractions"/>
+	<feature name="negative numbers"/>
+	<feature name="sientific notation"/>
+	<feature name="regrouping"/>
+	<feature name="multiple of ten"/>
+	<feature name="units"/>
+	<feature name="percentage"/>
 </configuration>

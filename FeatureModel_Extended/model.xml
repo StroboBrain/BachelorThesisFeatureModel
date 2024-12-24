@@ -59,9 +59,12 @@
 				<feature name="common fractions"/>
 				<feature name="decimal fractions"/>
 				<feature name="negative numbers"/>
+				<feature name="sientific notation"/>
 			</or>
 			<feature name="regrouping"/>
 			<feature name="multiple of ten"/>
+			<feature name="units"/>
+			<feature name="percentage"/>
 		</and>
 	</struct>
 	<constraints>

@@ -71,19 +71,19 @@
 				<var>order of operations</var>
 				<disj>
 					<conj>
+						<var>cross operation</var>
 						<var>multiplicative operations</var>
-						<var>exponential operations</var>
 					</conj>
-					<conj>
-						<var>multiplicative operations</var>
-						<disj>
+					<disj>
+						<conj>
 							<var>cross operation</var>
-							<conj>
-								<var>cross operation</var>
-								<var>exponential operations</var>
-							</conj>
-						</disj>
-					</conj>
+							<var>exponential operations</var>
+						</conj>
+						<conj>
+							<var>multiplicative operations</var>
+							<var>exponential operations</var>
+						</conj>
+					</disj>
 				</disj>
 			</imp>
 		</rule>
@@ -92,19 +92,22 @@
 			<imp>
 				<var>mandatory parentheses</var>
 				<disj>
-					<conj>
-						<var>multiplicative operations</var>
-						<var>exponential operations</var>
-					</conj>
+					<var>negative numbers</var>
 					<disj>
 						<conj>
+							<var>cross operation</var>
 							<var>multiplicative operations</var>
-							<var>cross operation</var>
 						</conj>
-						<conj>
-							<var>cross operation</var>
-							<var>exponential operations</var>
-						</conj>
+						<disj>
+							<conj>
+								<var>cross operation</var>
+								<var>exponential operations</var>
+							</conj>
+							<conj>
+								<var>multiplicative operations</var>
+								<var>exponential operations</var>
+							</conj>
+						</disj>
 					</disj>
 				</disj>
 			</imp>
