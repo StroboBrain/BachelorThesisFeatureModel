@@ -2,14 +2,13 @@
 <featureModel>
 	<properties>
 		<graphics key="autolayoutconstraints" value="false"/>
-		<graphics key="legendposition" value="301,559"/>
-		<graphics key="legendautolayout" value="false"/>
+		<graphics key="legendautolayout" value="true"/>
 		<graphics key="showconstraints" value="true"/>
 		<graphics key="showshortnames" value="false"/>
-		<graphics key="layout" value="vertical"/>
+		<graphics key="layout" value="horizontal"/>
 		<graphics key="showcollapsedconstraints" value="true"/>
 		<graphics key="legendhidden" value="false"/>
-		<graphics key="layoutalgorithm" value="4"/>
+		<graphics key="layoutalgorithm" value="1"/>
 	</properties>
 	<struct>
 		<and mandatory="true" name="task">
@@ -29,6 +28,9 @@
 					<feature name="addition"/>
 					<feature name="subtraction"/>
 				</or>
+				<feature name="conversion">
+					<description>A conversion is not a operation, but to be consistant to the model, it was added as a child of operations.</description>
+				</feature>
 			</or>
 			<feature abstract="true" mandatory="true" name="number of operands">
 				<graphics key="collapsed" value="false"/>
@@ -59,12 +61,17 @@
 				<feature name="common fractions"/>
 				<feature name="decimal fractions"/>
 				<feature name="negative numbers"/>
-				<feature name="sientific notation"/>
+				<feature name="numbers in sientific notation"/>
 			</or>
 			<feature name="regrouping"/>
 			<feature name="multiple of ten"/>
 			<feature name="units"/>
 			<feature name="percentage"/>
+			<and name="tasks with variables">
+				<feature name="equation"/>
+				<feature name="inequality"/>
+				<feature name="tasks with questionmark"/>
+			</and>
 		</and>
 	</struct>
 	<constraints>

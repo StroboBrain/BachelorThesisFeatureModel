@@ -11,6 +11,7 @@
 	<feature name="cross operation"/>
 	<feature name="addition"/>
 	<feature name="subtraction"/>
+	<feature name="conversion"/>
 	<feature name="number of operands"/>
 	<feature name="parentheses"/>
 	<feature name="mandatory parentheses"/>
@@ -25,9 +26,13 @@
 	<feature name="common fractions"/>
 	<feature name="decimal fractions"/>
 	<feature name="negative numbers"/>
-	<feature name="sientific notation"/>
+	<feature name="numbers in sientific notation"/>
 	<feature name="regrouping"/>
 	<feature name="multiple of ten"/>
 	<feature name="units"/>
 	<feature name="percentage"/>
+	<feature name="tasks with variables"/>
+	<feature name="equation"/>
+	<feature name="inequality"/>
+	<feature name="tasks with questionmark"/>
 </configuration>
