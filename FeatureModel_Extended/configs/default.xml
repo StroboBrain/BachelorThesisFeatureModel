@@ -12,6 +12,13 @@
 	<feature name="addition"/>
 	<feature name="subtraction"/>
 	<feature name="conversion"/>
+	<feature name="units"/>
+	<feature name="distance"/>
+	<feature name="area"/>
+	<feature name="volumes"/>
+	<feature name="money"/>
+	<feature name="time"/>
+	<feature name="speed"/>
 	<feature name="number of operands"/>
 	<feature name="parentheses"/>
 	<feature name="mandatory parentheses"/>
@@ -29,10 +36,13 @@
 	<feature name="numbers in sientific notation"/>
 	<feature name="regrouping"/>
 	<feature name="multiple of ten"/>
-	<feature name="units"/>
 	<feature name="percentage"/>
 	<feature name="tasks with variables"/>
 	<feature name="equation"/>
 	<feature name="inequality"/>
 	<feature name="tasks with questionmark"/>
+	<feature name="how to solve the task"/>
+	<feature name="calculator"/>
+	<feature name="pen and paper"/>
+	<feature name="no aids"/>
 </configuration>

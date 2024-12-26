@@ -28,9 +28,17 @@
 					<feature name="addition"/>
 					<feature name="subtraction"/>
 				</or>
-				<feature name="conversion">
+				<and abstract="true" name="conversion">
 					<description>A conversion is not a operation, but to be consistant to the model, it was added as a child of operations.</description>
-				</feature>
+					<alt abstract="true" name="units">
+						<feature name="distance"/>
+						<feature name="area"/>
+						<feature name="volumes"/>
+						<feature name="money"/>
+						<feature name="time"/>
+						<feature name="speed"/>
+					</alt>
+				</and>
 			</or>
 			<feature abstract="true" mandatory="true" name="number of operands">
 				<graphics key="collapsed" value="false"/>
@@ -65,13 +73,17 @@
 			</or>
 			<feature name="regrouping"/>
 			<feature name="multiple of ten"/>
-			<feature name="units"/>
 			<feature name="percentage"/>
-			<and name="tasks with variables">
+			<and abstract="true" name="tasks with variables">
 				<feature name="equation"/>
 				<feature name="inequality"/>
 				<feature name="tasks with questionmark"/>
 			</and>
+			<or abstract="true" name="how to solve the task">
+				<feature name="calculator"/>
+				<feature name="pen and paper"/>
+				<feature name="no aids"/>
+			</or>
 		</and>
 	</struct>
 	<constraints>
