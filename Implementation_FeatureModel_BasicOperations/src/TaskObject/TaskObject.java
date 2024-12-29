@@ -75,12 +75,13 @@ public   class  TaskObject {
 
 	
 	
-	//Returns a Task with the desired multiple of tens. Hardcoded to 10 at the moment
+	//Returns a Task with the desired multiple of tens.
+	
 	 public void multipleOfTen  () {
 		//Hardcoded at the moment Could be multiple of 100 as well
 		int addZero = 1;
 		String newTask = "";
-		//-1 because we do not want the "="
+		// For loop to increase the number size
 		for (int i = 0; i<this.taskList.size();i++) {
 			String temp = taskList.get(i);
 			if (this.isNumeric(temp)){
@@ -188,7 +189,7 @@ public   class  TaskObject {
     
     
 	
-	// Helper methodes to decide if a string is numeric
+	// Helper methode to decide if a string is numeric
 	private boolean isNumeric(String str) { 
 		  try {  
 		    Double.parseDouble(str);  

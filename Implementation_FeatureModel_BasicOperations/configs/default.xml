@@ -2,12 +2,12 @@
 <configuration>
 	<feature automatic="selected" name="Task"/>
 	<feature automatic="selected" name="Operation"/>
-	<feature automatic="unselected" name="CrossOperations"/>
+	<feature automatic="selected" name="CrossOperations"/>
 	<feature automatic="unselected" name="Subtraction"/>
-	<feature automatic="unselected" name="Addition"/>
-	<feature automatic="selected" manual="selected" name="MultiplicativeOperations"/>
+	<feature manual="selected" name="Addition"/>
+	<feature automatic="unselected" name="MultiplicativeOperations"/>
 	<feature automatic="unselected" name="Multiplication"/>
-	<feature manual="selected" name="Division"/>
+	<feature automatic="unselected" name="Division"/>
 	<feature automatic="selected" name="NumberRange"/>
 	<feature manual="selected" name="OneTo1000"/>
 	<feature automatic="unselected" name="OneTo4000"/>

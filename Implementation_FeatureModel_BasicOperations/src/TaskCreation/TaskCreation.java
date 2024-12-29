@@ -1,69 +1,44 @@
-package TaskCreation; 
-import java.util.Random; 
-
-import java.util.ArrayList; 
-import java.util.Collections; 
-import PrimeUtility.*; 
-
-
 /**
- * Creates Division solutions
+ * TODO description
  */
 
+package TaskCreation; 
+
+import java.util.Random; 
 
 public   class  TaskCreation {
 	
 	
-	int solution;
+	private int solution;
 
 	
-	String taskAsString;
+	private String taskAsString;
 
-	
 	
 	private Random random  = new Random();
 
 	
 	
 	private int chooseSolution  (int rangeMin, int rangeMax) {
-	    // Increasing the minimum so that there is a possible solution
-	    int range = rangeMax - rangeMin;
-	    int possibleSolution = rangeMin + this.random.nextInt(range);
-	    // Change possibleSolution if too small or too big
-	    if (possibleSolution < rangeMin + range / 10) {
-	        possibleSolution += range / 10;
-	    } else if (possibleSolution > rangeMax - range / 10) {
-	        possibleSolution -= range / 10;
-	    }
-	    while (possibleSolution*2>rangeMax) {
-	    	possibleSolution--;
-	    }
-	    return possibleSolution;
+		return rangeMin + random.nextInt((rangeMax - rangeMin) + 1); 
 	}
 
 	
-
- 
+	
 	  public String createTask  (int rangeMin, int rangeMax, int solution) {
-		 int maxMultiplier = (int) (rangeMax/solution);
-		 int secondeFactor = this.random.nextInt(maxMultiplier)+1;
-		 int firstFactor = secondeFactor * solution;
-		 
-		 return firstFactor + "/" + secondeFactor;
-	       
+	        int summand = rangeMin + random.nextInt((solution - rangeMin) + 1);
+	        return summand + "+" + (solution - summand);
 	    }
 
 	
 	
-	
-	// Will use the methodes to create the desired Task
+	// creates the desired task
 	public TaskCreation(int rangeMin, int rangeMax) {
 		this.solution = this.chooseSolution(rangeMin,rangeMax);
 		this.taskAsString = this.createTask(rangeMin, rangeMax, this.solution);
 		
 	}
 
-	
 	
 	
 	public String getTaskAsString() {
@@ -75,9 +50,6 @@ public   class  TaskCreation {
 	public int getSolution() {
 		return this.solution;
 	}
-
-	
-	private PrimeUtility primeUtility = new PrimeUtility();
 
 
 }
