@@ -14,18 +14,18 @@
 		<and mandatory="true" name="Task">
 			<description>The Task holds the Main and TaskObject class, that give a structure for the task</description>
 			<graphics key="collapsed" value="false"/>
-			<or abstract="true" mandatory="true" name="Operation">
+			<alt abstract="true" mandatory="true" name="Operation">
 				<feature name="Subtraction"/>
 				<feature name="Addition"/>
 				<feature name="Multiplication"/>
 				<feature name="Division"/>
-			</or>
-			<and abstract="true" mandatory="true" name="NumberRange">
+			</alt>
+			<and abstract="true" mandatory="true" name="Number Range">
 				<description>It is mandatory to choose a certain range</description>
-				<feature mandatory="true" name="OperandRange"/>
-				<feature mandatory="true" name="ResultRange"/>
+				<feature mandatory="true" name="Operand Range"/>
+				<feature mandatory="true" name="Solution Range"/>
 			</and>
-			<feature name="MultipleOfTen">
+			<feature name="Multiple Of Ten">
 				<description>Make the tasks contain multiple of ten</description>
 			</feature>
 			<feature mandatory="true" name="="/>
@@ -37,9 +37,9 @@
 		<feature name="Addition"/>
 		<feature name="Multiplication"/>
 		<feature name="Division"/>
-		<feature name="OperandRange"/>
-		<feature name="ResultRange"/>
-		<feature name="MultipleOfTen"/>
+		<feature name="Operand Range"/>
+		<feature name="Solution Range"/>
+		<feature name="Multiple Of Ten"/>
 		<feature name="="/>
 	</featureOrder>
 </featureModel>

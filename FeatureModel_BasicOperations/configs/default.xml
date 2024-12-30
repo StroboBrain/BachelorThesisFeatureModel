@@ -6,9 +6,9 @@
 	<feature name="Addition"/>
 	<feature name="Multiplication"/>
 	<feature name="Division"/>
-	<feature name="NumberRange"/>
-	<feature name="OperandRange"/>
-	<feature name="ResultRange"/>
-	<feature name="MultipleOfTen"/>
+	<feature name="Number Range"/>
+	<feature name="Operand Range"/>
+	<feature name="Solution Range"/>
+	<feature name="Multiple Of Ten"/>
 	<feature name="="/>
 </configuration>

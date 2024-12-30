@@ -10,23 +10,21 @@ import java.util.ArrayList;
 public class PrimeUtility {
 
 	//Checks if the number is prime
-    public boolean isPrime(int number) {
+	public boolean isPrime(int number) {
         BigInteger bigInt = BigInteger.valueOf(number);
         return bigInt.isProbablePrime(1);
     }
-    
-    
-    // 
     /**
      * precondition:
      * This function will only be called if the number is not prime.
      * 
      * postcondition:
-     * returns an ArrayList with all factors other then 1 and the number itself
+     * returns an ArrayList with all non trivial factors (1 and the number itslef)
      */
+    
     public ArrayList<Integer> factors (int number){
     	ArrayList<Integer> factorList = new ArrayList<Integer>();
-    	int limit = (int) (number/2 + 1) ;
+    	int limit = (int) (number/2 + 1);
     	
     	for (int i = 2; i<=limit;i++) {
     		if (number%i==0) {
@@ -35,9 +33,7 @@ public class PrimeUtility {
     	}
     	assert factorList.size()>0: "Number " + number + " limit " + limit;
     	return factorList;
-    	
     	//performance could be improved if needed
     }
-    
     
 }
