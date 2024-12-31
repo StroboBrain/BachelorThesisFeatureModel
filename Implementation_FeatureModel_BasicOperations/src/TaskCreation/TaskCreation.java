@@ -7,7 +7,6 @@ import java.util.Random;
 
 public   class  TaskCreation {
 	
-	
 	private int solution;
 
 	
@@ -30,21 +29,18 @@ public   class  TaskCreation {
 		}
 
 	
-	
-	// creates the desired task
+	// creates the specific tasks
 	public TaskCreation(int rangeMin, int rangeMax) {
 		this.solution = this.chooseSolution(rangeMin,rangeMax);
-		this.taskAsString = this.createTask(rangeMin, rangeMax, this.solution);
-		
+		this.taskAsString = this.createTask(rangeMin, rangeMax, this.solution);	
 	}
 
 	
-	
+	// Getter and Setters
 	public String getTaskAsString() {
 		return this.taskAsString;
 	}
 
-	
 	
 	public int getSolution() {
 		return this.solution;
