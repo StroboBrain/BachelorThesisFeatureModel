@@ -2,7 +2,7 @@
 <featureModel>
 	<properties>
 		<graphics key="autolayoutconstraints" value="false"/>
-		<graphics key="legendposition" value="301,559"/>
+		<graphics key="legendposition" value="341,248"/>
 		<graphics key="legendautolayout" value="false"/>
 		<graphics key="showconstraints" value="true"/>
 		<graphics key="showshortnames" value="false"/>
@@ -21,7 +21,10 @@
 					<feature name="multiplication"/>
 				</or>
 				<or abstract="true" name="exponential operations">
-					<feature name="exponents"/>
+					<or abstract="true" name="exponents">
+						<feature name="positive exponents"/>
+						<feature name="negative exponents"/>
+					</or>
 					<feature name="roots"/>
 				</or>
 				<or abstract="true" name="cross operation">

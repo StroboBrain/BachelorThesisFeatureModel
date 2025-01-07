@@ -7,6 +7,8 @@
 	<feature automatic="selected" name="multiplication"/>
 	<feature automatic="selected" name="exponential operations"/>
 	<feature manual="selected" name="exponents"/>
+	<feature name="positive exponents"/>
+	<feature name="negative exponents"/>
 	<feature name="roots"/>
 	<feature automatic="selected" name="cross operation"/>
 	<feature manual="selected" name="addition"/>
