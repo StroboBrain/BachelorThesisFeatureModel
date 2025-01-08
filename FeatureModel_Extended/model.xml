@@ -13,76 +13,82 @@
 	<struct>
 		<and mandatory="true" name="task">
 			<graphics key="collapsed" value="false"/>
-			<or abstract="true" mandatory="true" name="operations">
+			<and abstract="true" mandatory="true" name="number Range">
 				<graphics key="collapsed" value="false"/>
-				<or abstract="true" name="multiplicative operations">
-					<feature name="division"/>
-					<feature name="multiplication"/>
-				</or>
-				<or abstract="true" name="exponential operations">
-					<feature name="exponents"/>
-					<feature name="roots"/>
-				</or>
-				<or abstract="true" name="cross operation">
-					<graphics key="collapsed" value="false"/>
-					<feature name="addition"/>
-					<feature name="subtraction"/>
-				</or>
-				<and abstract="true" name="conversion">
-					<description>A conversion is not a operation, but to be consistant to the model, it was added as a child of operations.</description>
-					<alt abstract="true" name="units">
-						<feature name="distance"/>
-						<feature name="area"/>
-						<feature name="volumes"/>
-						<feature name="money"/>
-						<feature name="time"/>
-						<feature name="speed"/>
-					</alt>
-				</and>
-			</or>
-			<feature abstract="true" mandatory="true" name="number of operands">
-				<graphics key="collapsed" value="false"/>
-			</feature>
-			<or abstract="true" name="parentheses">
-				<graphics key="collapsed" value="false"/>
-				<feature name="mandatory parentheses">
+				<feature mandatory="true" name="solution range">
 					<graphics key="collapsed" value="false"/>
 				</feature>
-				<feature name="non mandatory parentheses">
-					<graphics key="collapsed" value="false"/>
-				</feature>
-			</or>
-			<feature mandatory="true" name="="/>
-			<feature name="order of operations"/>
-			<and mandatory="true" name="number Range">
-				<graphics key="collapsed" value="false"/>
-				<feature abstract="true" mandatory="true" name="solution range">
-					<graphics key="collapsed" value="false"/>
-				</feature>
-				<feature abstract="true" mandatory="true" name="operands range">
+				<feature mandatory="true" name="operands range">
 					<graphics key="collapsed" value="false"/>
 				</feature>
 			</and>
 			<or abstract="true" mandatory="true" name="type of numbers">
 				<graphics key="collapsed" value="false"/>
-				<feature name="integers"/>
+				<feature name="positive integers"/>
 				<feature name="common fractions"/>
 				<feature name="decimal fractions"/>
 				<feature name="negative numbers"/>
 				<feature name="numbers in sientific notation"/>
 			</or>
-			<feature name="regrouping"/>
-			<feature name="multiple of ten"/>
-			<feature name="percentage"/>
-			<and abstract="true" name="tasks with variables">
-				<feature name="equation"/>
-				<feature name="inequality"/>
-				<feature name="tasks with questionmark"/>
-			</and>
-			<or abstract="true" name="how to solve the task">
-				<feature name="calculator"/>
-				<feature name="pen and paper"/>
-				<feature name="no aids"/>
+			<alt abstract="true" mandatory="true" name="how to solve the task">
+				<feature abstract="true" name="calculator"/>
+				<feature abstract="true" name="pen and paper"/>
+				<feature abstract="true" name="no aid"/>
+			</alt>
+			<or abstract="true" mandatory="true" name="type of task">
+				<alt abstract="true" name="conversion">
+					<description>A conversion is not a operation, but to be consistant to the model, it was added as a child of operations.</description>
+					<alt abstract="true" name="units">
+						<feature name="distance"/>
+						<feature name="area"/>
+						<feature name="volume"/>
+						<feature name="money"/>
+						<feature name="time"/>
+						<feature name="speed"/>
+					</alt>
+					<feature name="percentage"/>
+				</alt>
+				<and abstract="true" name="task with operations">
+					<feature mandatory="true" name="number of operands">
+						<graphics key="collapsed" value="false"/>
+					</feature>
+					<feature name="order of operations"/>
+					<alt abstract="true" name="tasks with variables">
+						<feature name="equation"/>
+						<feature name="inequality"/>
+						<feature name="task with questionmark"/>
+					</alt>
+					<or abstract="true" mandatory="true" name="operations">
+						<graphics key="collapsed" value="false"/>
+						<or abstract="true" name="multiplicative operations">
+							<feature name="division"/>
+							<feature name="multiplication"/>
+						</or>
+						<or abstract="true" name="exponential operations">
+							<or abstract="true" name="exponents">
+								<feature name="postive exponent"/>
+								<feature name="negative exponent"/>
+							</or>
+							<feature name="roots"/>
+						</or>
+						<or abstract="true" name="cross operation">
+							<graphics key="collapsed" value="false"/>
+							<feature name="addition"/>
+							<feature name="subtraction"/>
+						</or>
+					</or>
+					<feature name="regrouping"/>
+					<feature name="multiple of ten"/>
+					<or abstract="true" name="parentheses">
+						<graphics key="collapsed" value="false"/>
+						<feature name="mandatory parentheses">
+							<graphics key="collapsed" value="false"/>
+						</feature>
+						<feature name="non mandatory parentheses">
+							<graphics key="collapsed" value="false"/>
+						</feature>
+					</or>
+				</and>
 			</or>
 		</and>
 	</struct>
@@ -91,28 +97,6 @@
 			<description>To have a hierarchy interaction, two operations of different hierarchy are required</description>
 			<imp>
 				<var>order of operations</var>
-				<disj>
-					<conj>
-						<var>multiplicative operations</var>
-						<var>exponential operations</var>
-					</conj>
-					<conj>
-						<var>multiplicative operations</var>
-						<disj>
-							<var>cross operation</var>
-							<conj>
-								<var>cross operation</var>
-								<var>exponential operations</var>
-							</conj>
-						</disj>
-					</conj>
-				</disj>
-			</imp>
-		</rule>
-		<rule>
-			<description>For mandatory parentheses we need two operations with a different priority</description>
-			<imp>
-				<var>mandatory parentheses</var>
 				<disj>
 					<conj>
 						<var>multiplicative operations</var>
@@ -127,6 +111,30 @@
 							<var>cross operation</var>
 							<var>exponential operations</var>
 						</conj>
+					</disj>
+				</disj>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>mandatory parentheses</var>
+				<disj>
+					<conj>
+						<var>multiplicative operations</var>
+						<var>exponential operations</var>
+					</conj>
+					<disj>
+						<conj>
+							<var>multiplicative operations</var>
+							<var>cross operation</var>
+						</conj>
+						<disj>
+							<conj>
+								<var>cross operation</var>
+								<var>exponential operations</var>
+							</conj>
+							<var>negative numbers</var>
+						</disj>
 					</disj>
 				</disj>
 			</imp>
